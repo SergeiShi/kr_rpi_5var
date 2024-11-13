@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добавить фильм</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+  }
+  h1, h2 {
+    color: #333;
+    text-align: center;
+  }
+  #movieList {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  #movieList li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  #movieList li strong {
+    display: block;
+    font-size: 1.1em;
+    color: #555;
+  }
+.movie-item {
+  display: flex;          
+  justify-content: space-between;  
+  align-items: center; 
+  padding: 5px 10px;       
+  border-bottom: 1px solid #ddd; 
+}
+
+.movie-title {
+  flex-grow: 1;            
+  font-size: 16px;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.delete-btn:hover {
+  background-color: #ff1a1a;
+}
+
+</style>  
+<body>
+  <h2>Добавить фильм</h2>
+  <form id="addMovieForm">
+    <label>
+      Название:
+      <input type="text" id="movieTitle" required>
+    </label>
+    <button type="submit">Добавить фильм</button>
+  </form>
+
+  <h2>Список фильмов</h2>
+  <ul id="movieList"></ul>
+
+  <script type="module" src="app.js"></script>
+</body>
+
+  
+
+</html>
